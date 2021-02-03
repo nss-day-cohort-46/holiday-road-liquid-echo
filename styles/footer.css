@@ -1,0 +1,7 @@
+.footer {
+    border-radius: 5px;
+    flex-grow: 1;
+    margin: 2px;
+    background-color: lightgray;
+    text-align: center;
+}
