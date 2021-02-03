@@ -3,7 +3,7 @@ let eateriesCollection = []
 export const useEateries = () => [...eateriesCollection]
 
 export const getEateries = () => {
-    fetch("http://holidayroad.nss.team/eateries")
+    return fetch("http://holidayroad.nss.team/eateries")
         .then( res => res.json())
         .then( parsedresponse => {
             eateriesCollection = parsedresponse
