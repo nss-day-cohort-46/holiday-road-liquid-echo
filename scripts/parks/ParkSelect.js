@@ -27,3 +27,15 @@ const render = parksCollection => {
     `
 }
 
+const eventHub = document.querySelector("#container")
+eventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.id === "parkSelect") {
+        const parkId = changeEvent.target.value
+        const customEvent = new CustomEvent("parkSelected", {
+            detail: {
+                id : parkId
+            }
+        })
+        eventHub.dispatchEvent(customEvent)
+    }
+})
