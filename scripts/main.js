@@ -1,6 +1,10 @@
-import { getParks } from "./parks/ParkProvider.js";
+import { getParks, useParks } from "./parks/ParkProvider.js";
 import { settings } from "./Settings.js";
 
-const allParkData = getParks (settings.npsKey)
-console.log('allParkData: ', allParkData);
+let allParks = []
+getParks(settings.npsKey)
+.then(() => {
+    allParks = useParks()
+    console.log('allParks: ', allParks);
+})
 
