@@ -12,14 +12,18 @@ export const parkSelect = () => {
 
 const render = parksCollection => {
     const contentTarget = document.querySelector(".selections__parks") // Get a reference to the DOM element where the <select> will be rendered
-    contentTarget.innerHTML += `
-        <select class="dropdown" id="parkSelect">
-            <option value="0">Please select a park...</option>
-            ${
-                parksCollection.map(parkObject => { //build out each option element inside the select box
-                    return `<option value="${parkObject.id}">${parkObject.fullName}</option>`
-                }).join("") //take out the commas in the HTML
-            }
-        </select>
+    contentTarget.innerHTML = `
+        <div class="selections__parks">
+            <label for="parkSelect">Choose a park</label>
+            <select class="dropdown" id="parkSelect">
+                <option value="0">Please select a park...</option>
+                ${
+                    parksCollection.map(parkObject => { //build out each option element inside the select box
+                        return `<option value="${parkObject.id}">${parkObject.fullName}</option>`
+                    }).join("") //take out the commas in the HTML
+                }
+            </select>
+        </div>
     `
 }
+
