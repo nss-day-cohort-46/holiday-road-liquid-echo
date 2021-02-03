@@ -10,7 +10,7 @@ export const getParks = (apiKey) => {                                           
         .then(response => response.json())                                      //converts the data to correct notation
         .then(parsedResponse => {
             
-            parks = parsedResponse                                              //put that formatted data in my variable
+            return parks = parsedResponse                                              //put that formatted data in my variable
         }
         )
 }
