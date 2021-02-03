@@ -9,99 +9,100 @@
     <body>
         <main id="container">
             <header class="header">
-                <img src="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" alt="logo">
+                <img id="logo" src="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" alt="logo">
                 <nav class="nav">
                     <a href="">Attractions</a>
                     <a href="">Eateries</a>
                     <a href="">Parks</a>
                 </nav>
             </header>
-            
-            
-            <section class="selections">
-                <div class="selections__parks">
-                    <select class="dropdown" id="parkSelect">
-                        <option value="0">select</option>
-                        <option value="1">select1</option>
-                        <option value="2">select2</option>
-                    </select>
-                </div>
-                <div class="selections__eateries">
-                    <select class="dropdown" id="eaterySelect">
-                        <option value="0">select</option>
-                        <option value="1">select1</option>
-                        <option value="2">select2</option>
-                    </select>
-                </div>
-                <div class="selections__attractions">
-                    <select class="dropdown" id="attractionSelect">
-                        <option value="0">select</option>
-                        <option value="1">select1</option>
-                        <option value="2">select2</option>
-                    </select>
-                </div>
-            </section>
-            <section class="preview">
-                <article class="preview__park">
-                    <h3>Park Name</h3>
-                    <button id="showDetails" value="parkId">details</button>
-                </article>
-                <article class="preview__forecast">
-                    <div class="weatherCard">
-                        <p>day1</p>
-                        <p>temp</p>
-                        <p>forecast</p>
-                    </div>
-                    <div class="weatherCard">
-                        <p>day2</p>
-                        <p>temp</p>
-                        <p>forecast</p>
-                    </div>
-                    <div class="weatherCard">
-                        <p>day3</p>
-                        <p>temp</p>
-                        <p>forecast</p>
-                    </div>
-                    <div class="weatherCard">
-                        <p>day4</p>
-                        <p>temp</p>
-                        <p>forecast</p>
-                    </div>
-                    <div class="weatherCard">
-                        <p>day5</p>
-                        <p>temp</p>
-                        <p>forecast</p>
-                    </div>
-                </article>
-                <article class="preview__eatery">
-                    <h3>Eatery Name</h3>
-                    <button id="showDetails" value="eateryId">details</button>
-                </article>
-                <article class="preview__attraction">
-                    <h3>Attraction Name</h3>
-                    <button id="showDetails" value="attractionId">details</button>
-                </article>
-                <button id="saveItinerary">Save Itinerary</button>
-            </section>
-            <aside class="itineraries">
-                <div class="itinerary">
-                    <h4>Date</h4>
-                    <p>Park</p>
-                    <p>eatery</p>
-                    <p>attraction</p>
-                </div>
-            </aside>
-            <dialog open="open">
-                <p>detail1</p>
-                <p>detail2</p>
-                <p>detail3</p>
-            </dialog>
+            <div class="contentContainer">
 
-            <section class="table"></section>
-            
                 
+                
+                <section class="selections">
+                    <div class="selections__parks">
+                        <select class="dropdown" id="parkSelect">
+                            <option value="0">select</option>
+                            <option value="1">select1</option>
+                            <option value="2">select2</option>
+                        </select>
+                    </div>
+                    <div class="selections__eateries">
+                        <select class="dropdown" id="eaterySelect">
+                            <option value="0">select</option>
+                            <option value="1">select1</option>
+                            <option value="2">select2</option>
+                        </select>
+                    </div>
+                    <div class="selections__attractions">
+                        <select class="dropdown" id="attractionSelect">
+                            <option value="0">select</option>
+                            <option value="1">select1</option>
+                            <option value="2">select2</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="preview">
+                    <article class="preview__park">
+                        <h3>Park Name</h3>
+                        <button class ="detailsButton" id="showParkDetails" value="parkId">details</button>
+                    </article>
+                    <article class="preview__forecast">
+                        <div class="weatherCard">
+                            <p>day1</p>
+                            <p>temp</p>
+                            <p>forecast</p>
+                        </div>
+                        <div class="weatherCard">
+                            <p>day2</p>
+                            <p>temp</p>
+                            <p>forecast</p>
+                        </div>
+                        <div class="weatherCard">
+                            <p>day3</p>
+                            <p>temp</p>
+                            <p>forecast</p>
+                        </div>
+                        <div class="weatherCard">
+                            <p>day4</p>
+                            <p>temp</p>
+                            <p>forecast</p>
+                        </div>
+                        <div class="weatherCard">
+                            <p>day5</p>
+                            <p>temp</p>
+                            <p>forecast</p>
+                        </div>
+                    </article>
+                    <article class="preview__eatery">
+                        <h3>Eatery Name</h3>
+                        <button class ="detailsButton" id="showEateryDetails" value="eateryId">details</button>
+                    </article>
+                    <article class="preview__attraction">
+                        <h3>Attraction Name</h3>
+                        <button id="showAttractionDetails" value="attractionId">details</button>
+                    </article>
+                    <button class ="detailsButton" id="saveItinerary">Save Itinerary</button>
+                </section>
+                <aside class="itineraries">
+                    <div class="itinerary">
+                        <h4>Date</h4>
+                        <p>Park</p>
+                        <p>eatery</p>
+                        <p>attraction</p>
+                    </div>
+                </aside>
+                <dialog open="open">
+                    <p>detail1</p>
+                    <p>detail2</p>
+                    <p>detail3</p>
+                </dialog>
+            </div> 
+            <footer class="footer">
+                <p>Liquid Echo Copyright 2021</p>
+            </footer>   
         </main>
-
         <script type="module" src="./scripts/main.js"></script>
     </body>
 </html>
