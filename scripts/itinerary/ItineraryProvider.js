@@ -1,11 +1,12 @@
 let itinerariesCollection = []
 
-const useItineraries = () => [...itinerariesCollection]
+export const useItineraries = () => [...itinerariesCollection]
 
 export const getItineraries = () => {
-    fetch("http://localhost:8088")
+    return fetch("http://localhost:8088/itineraries")
         .then( res => res.json() )
         .then( parsedRes => {
-            itinerariesCollection = useItineraries()
-        })
+                itinerariesCollection = parsedRes
+                console.log(itinerariesCollection)
+            })
 }
