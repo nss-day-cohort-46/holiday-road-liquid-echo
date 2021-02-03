@@ -2,6 +2,8 @@ import { eaterySelect } from "./eateries/EaterySelect.js";
 import { attractionSelect } from './attractions/AttractionSelect.js';
 import { parkSelect } from './parks/ParkSelect.js'
 
-parkSelect()
-eaterySelect()
-attractionSelect()
+parkSelect().then( () => {
+    eaterySelect().then( () => {
+        attractionSelect()
+    })
+})

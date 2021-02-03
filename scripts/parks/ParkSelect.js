@@ -3,7 +3,7 @@ import { getParks, useParks } from "./ParkProvider.js";
 let allParks = []
 
 export const parkSelect = () => {
-    getParks()
+    return getParks()
     .then(() => {
         allParks = useParks()
         render(allParks) //build out the select element HTML
