@@ -1,0 +1,19 @@
+.itineraries {
+    flex-grow: 1;
+    margin: 2px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+}
+
+.itinerary {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.itinerary > h4 {
+    align-self: flex-start
+}

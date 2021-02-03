@@ -1,0 +1,9 @@
+@import './header.css';
+@import './content.css';
+@import './aside.css';
+@import './footer.css';
+@import './dialog.css';
+
+body {
+    background-color: steelblue;
+}
