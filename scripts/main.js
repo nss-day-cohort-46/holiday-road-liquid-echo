@@ -1,3 +1,4 @@
+
 import { getAttractions } from './attractions/AttractionProvider.js'
 
 getAttractions()
@@ -17,7 +18,11 @@ getParks(settings.npsKey)
     console.log('allParks: ', allParks);
 })
 
-getEateries()
+import { parkSelect } from './parks/ParkSelect.js'
+
+
+
+parkSelect()
 eaterySelect()
 
 
@@ -25,6 +30,10 @@ getItineraries()
 
 const eventHub = document.querySelector("#container")
 eventHub.addEventListener("eaterySelected", e =>{
+    console.log(e.detail.id)
+})
+
+eventHub.addEventListener("parkSelected", e =>{
     console.log(e.detail.id)
 })
 
