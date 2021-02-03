@@ -7,6 +7,7 @@ getAttractions()
 import { getParks, useParks } from "./parks/ParkProvider.js";
 import { settings } from "./Settings.js";
 import { getEateries } from './eateries/EateryProvider.js'
+import { eaterySelect } from "./eateries/EaterySelect.js";
 
 let allParks = []
 getParks(settings.npsKey)
@@ -16,4 +17,9 @@ getParks(settings.npsKey)
 })
 
 getEateries()
+eaterySelect()
 
+const eventHub = document.querySelector("#container")
+eventHub.addEventListener("eaterySelected", e =>{
+    console.log(e.detail.id)
+})
