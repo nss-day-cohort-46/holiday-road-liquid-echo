@@ -1,0 +1,62 @@
+.contentContainer { 
+    display: flex;
+}
+
+.contentContainerLeft {
+    flex-grow: 3;
+}
+
+.selections, .preview {
+    background-color: lightblue;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.selections {
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview__park, .preview__eatery, .preview__attraction {
+    display: flex;
+    margin: 2px;
+    justify-content: space-between;
+}
+
+.detailsButton {
+    align-self: flex-end;
+    margin: 5px;
+}
+
+.preview__forecast {    
+    display: flex;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 2px;
+    justify-content: space-evenly;
+}
+
+.weatherCard {
+    background-color: lightgreen;
+    margin: 2px;
+}
+
+
+#saveItinerary {
+    align-self: flex-end;
+    margin: 5px;
+}
+
+.disabled {
+    background-color: gray;
+}
+.enabled {
+    background-color: lightgreen;
+}

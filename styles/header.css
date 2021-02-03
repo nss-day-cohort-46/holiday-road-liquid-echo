@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+#logo {
+    width: 100px;
+    justify-self: flex-start;
+    margin: 5px;
+}
