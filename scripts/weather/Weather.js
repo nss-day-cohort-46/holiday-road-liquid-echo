@@ -1,36 +1,14 @@
-export const Weather = item => {
+export const Weather = day => {
     return `
-            <article class="preview__${item.type}">
-                <h3>${item.name}</h3>
-                <button class ="detailsButton" id="${item.type}DetailsButton" value="${item.id}">details</button>
-            </article>
     <div class="weatherCard">
-        <p>day1</p>
-        <p>temp</p>
-        <p>forecast</p>
+        <p>${day.name}</p>
+        <p>${day.temp}°F</p>
+        <p>${day.mainWeather}</p>
     </div>
     `
 }
 
-    <article class="preview__forecast">
-    <div class="weatherCard">
-        <p>day2</p>
-        <p>temp</p>
-        <p>forecast</p>
-    </div>
-    <div class="weatherCard">
-        <p>day3</p>
-        <p>temp</p>
-        <p>forecast</p>
-    </div>
-    <div class="weatherCard">
-        <p>day4</p>
-        <p>temp</p>
-        <p>forecast</p>
-    </div>
-    <div class="weatherCard">
-        <p>day5</p>
-        <p>temp</p>
-        <p>forecast</p>
-    </div>
-    </article>
+    // <article class="preview__weather">
+    //     <h3>5-Day Forecast</h3>
+    //     weatherCards
+    // </article>
