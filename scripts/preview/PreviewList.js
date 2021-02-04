@@ -99,11 +99,15 @@ const saveButtonActive = () => {
     }
 }
 
+const resetDivs = document.querySelectorAll(".reset")
+const resetPage = () => {
+    resetDivs.forEach(div => {
+        div.innerHTML = ""
+    })
+}
 const clearPreview = () => {
     parkObj = {}
     eateryObj = {}
     attractionObj = {}
-    Preview(parkObj)
-    Preview(eateryObj)
-    Preview(attractionObj)
+    resetPage()
 }
