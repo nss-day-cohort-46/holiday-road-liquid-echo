@@ -7,7 +7,18 @@ export const getEateries = () => {
         .then( res => res.json())
         .then( parsedresponse => {
             eateriesCollection = parsedresponse
-// TEST CODE to make sure we're getting usable data 
-            console.log(useEateries()[0])
         })
+}
+export const getEateryDetail = (eateryId) =>{
+    let eatery = eateriesCollection.find(eatery => parseInt(eateryId) === eatery.id)
+    const eateryDetail = {
+        id : eatery.id,
+        type : "eatery",
+        name : eatery.businessName,
+        city : eatery.city,
+        state : eatery.state,
+        description : eatery.description,
+    }
+    return eateryDetail
+
 }
