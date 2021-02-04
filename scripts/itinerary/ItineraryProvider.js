@@ -16,7 +16,6 @@ export const getItineraries = () => {
             })
 }
 export const saveItinerary = itinerary => {
-    debugger
     return fetch('http://localhost:8088/itineraries', {
         method: "POST",
         headers: {

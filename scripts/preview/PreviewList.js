@@ -50,7 +50,6 @@ eventHub.addEventListener("click", e => {
                 attractionID: attractionObj.id,
                 date: new Date()
             }
-            debugger
         saveItinerary(itinerary).then(clearPreview)
     }
 })
