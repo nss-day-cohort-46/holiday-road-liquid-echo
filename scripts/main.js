@@ -14,3 +14,16 @@ parkSelect().then( () => {
         })
     })
 })
+
+// Test Code Below
+import { Preview } from './preview/Preview.js'
+
+let item = {
+    id: 123,
+    type: "park",
+    name: "Very Pretty Park"
+}
+
+let park = Preview(item)
+
+console.log(park)
