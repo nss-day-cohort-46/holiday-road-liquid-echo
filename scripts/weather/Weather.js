@@ -7,8 +7,3 @@ export const Weather = day => {
     </div>
     `
 }
-
-    // <article class="preview__weather">
-    //     <h3>5-Day Forecast</h3>
-    //     weatherCards
-    // </article>
