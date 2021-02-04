@@ -3,8 +3,11 @@ import { getEateryDetail } from "../eateries/EateryProvider.js"
 import { saveItinerary } from "../itinerary/ItineraryProvider.js"
 import { getParkDetail } from "../parks/ParkProvider.js"
 import { Preview } from "./Preview.js"
+import "../weather/WeatherList.js"
 
-const targetElement = document.querySelector(".preview")
+const parkTargetElement = document.querySelector(".preview__park")
+const eateryTargetElement = document.querySelector(".preview__eatery")
+const attractionTargetElement = document.querySelector(".preview__attraction")
 const eventHub = document.querySelector("#container")
 let parkHTML = ""
 let attractionHTML = ""
@@ -12,6 +15,7 @@ let eateryHTML = ""
 let eateryObj
 let attractionObj
 let parkObj
+
 
 eventHub.addEventListener("parkSelected", event => {
     if (event.detail.id !==0) {
@@ -54,12 +58,9 @@ eventHub.addEventListener("click", e => {
 })
 
 const render = () => {
-    targetElement.innerHTML = `
-    ${parkHTML}
-    ${eateryHTML}
-    ${attractionHTML}
-    <button disabled id="saveItinerary">Save Itinerary</button>
-    `
+    parkTargetElement.innerHTML = `${parkHTML}`
+    eateryTargetElement.innerHTML = `${eateryHTML}`
+    attractionTargetElement.innerHTML = `${attractionHTML}`
 }
 
 
@@ -105,7 +106,3 @@ const clearPreview = () => {
     Preview(eateryObj)
     Preview(attractionObj)
 }
-
-
-
-    // ${forecastHTML}
