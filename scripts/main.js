@@ -14,3 +14,9 @@ parkSelect().then( () => {
 })
 
 ItineraryList()
+
+// TEST CODE
+import { getWeather } from "./weather/WeatherProvider.js";
+import {getParks} from './parks/ParkProvider.js'
+
+getParks().then( () => getWeather("77E0D7F0-1942-494A-ACE2-9004D2BDC59E"))
