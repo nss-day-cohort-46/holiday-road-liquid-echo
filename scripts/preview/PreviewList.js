@@ -42,30 +42,3 @@ const render = () => {
 }
 
     // ${forecastHTML}
-    // <article class="preview__forecast">
-    // <div class="weatherCard">
-    //     <p>day1</p>
-    //     <p>temp</p>
-    //     <p>forecast</p>
-    // </div>
-    // <div class="weatherCard">
-    //     <p>day2</p>
-    //     <p>temp</p>
-    //     <p>forecast</p>
-    // </div>
-    // <div class="weatherCard">
-    //     <p>day3</p>
-    //     <p>temp</p>
-    //     <p>forecast</p>
-    // </div>
-    // <div class="weatherCard">
-    //     <p>day4</p>
-    //     <p>temp</p>
-    //     <p>forecast</p>
-    // </div>
-    // <div class="weatherCard">
-    //     <p>day5</p>
-    //     <p>temp</p>
-    //     <p>forecast</p>
-    // </div>
-    // </article>
