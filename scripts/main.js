@@ -4,6 +4,7 @@ import { parkSelect } from './parks/ParkSelect.js'
 import { getAttractionDetail } from "./attractions/AttractionProvider.js";
 import { getParkDetail, getParks } from "./parks/ParkProvider.js";
 import { getEateryDetail } from "./eateries/EateryProvider.js"
+import './preview/PreviewList.js'
 
 parkSelect().then( () => {
     eaterySelect().then( () => {
