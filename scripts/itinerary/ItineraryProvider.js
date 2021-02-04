@@ -12,7 +12,6 @@ export const getItineraries = () => {
         .then( res => res.json() )
         .then( parsedRes => {
                 itinerariesCollection = parsedRes
-                console.log(itinerariesCollection)
             })
 }
 export const saveItinerary = itinerary => {

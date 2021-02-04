@@ -3,6 +3,8 @@
     margin: 2px;
     background-color: lightgoldenrodyellow;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .itinerary {

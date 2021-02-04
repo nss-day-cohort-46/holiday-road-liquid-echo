@@ -4,6 +4,7 @@ import { parkSelect } from './parks/ParkSelect.js'
 import { Weather } from "./weather/Weather.js";
 import './preview/PreviewList.js'
 import './preview/PreviewDetail.js'
+import { ItineraryList } from "./itinerary/ItineraryList.js";
 
 
 parkSelect().then( () => {
@@ -11,3 +12,5 @@ parkSelect().then( () => {
         attractionSelect()
     })
 })
+
+ItineraryList()
