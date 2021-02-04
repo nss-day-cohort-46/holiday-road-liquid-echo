@@ -35,6 +35,8 @@ export const getParkLatLon = (parkId) => {
 // This converts a number [0-6] into a day of the week.
 const getDayOfWeek = number => {
     let local = number
+    if ((new Date()).getDay() === number ) return "Today"
+    if ((new Date()).getDay() + 1 === number ) return "Tomorrow"
     if (local > 6) number -= 7
     const weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     return weekDays[number]
