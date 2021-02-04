@@ -35,7 +35,7 @@
     margin: 5px;
 }
 
-.preview__forecast {    
+.preview__weather {    
     display: flex;
     border-radius: 5px;
     background-color: lightgray;
@@ -54,9 +54,6 @@
     margin: 5px;
 }
 
-.disabled {
-    background-color: gray;
-}
-.enabled {
-    background-color: lightgreen;
+.dropdown {
+    width: 200px;
 }

@@ -18,5 +18,5 @@ const getWeatherHTML = (weatherArray) => {
     for(const weatherObj of weatherArray){
         weatherHTML += Weather(weatherObj)
     }
-    contentTarget.innerHTML = `<article class="preview__weather">${weatherHTML}</article>`
+    contentTarget.innerHTML = weatherHTML
 }
