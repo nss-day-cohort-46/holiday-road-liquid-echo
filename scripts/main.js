@@ -6,12 +6,10 @@ import './preview/PreviewDetail.js'
 import { ItineraryList } from "./itinerary/ItineraryList.js";
 
 
-parkSelect().then( () => {
-    eaterySelect().then( () => {
-        attractionSelect()
-    })
-})
-ItineraryList()
+parkSelect()
+    .then(eaterySelect)
+    .then(attractionSelect)
+    .then(ItineraryList)
 
 
 // TEST CODE
