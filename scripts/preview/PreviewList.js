@@ -1,5 +1,6 @@
 import { getAttractionDetail } from "../attractions/AttractionProvider.js"
 import { getEateryDetail } from "../eateries/EateryProvider.js"
+import { ItineraryList } from "../itinerary/ItineraryList.js"
 import { saveItinerary } from "../itinerary/ItineraryProvider.js"
 import { getParkDetail } from "../parks/ParkProvider.js"
 import { Preview } from "./Preview.js"
@@ -53,7 +54,7 @@ eventHub.addEventListener("click", e => {
                 attractionID: attractionObj.id,
                 date: new Date()
             }
-        saveItinerary(itinerary).then(clearPreview)
+        saveItinerary(itinerary).then(clearPreview).then(ItineraryList)
     }
 })
 
@@ -98,11 +99,15 @@ const saveButtonActive = () => {
     }
 }
 
+const resetDivs = document.querySelectorAll(".reset")
+const resetPage = () => {
+    resetDivs.forEach(div => {
+        div.innerHTML = ""
+    })
+}
 const clearPreview = () => {
     parkObj = {}
     eateryObj = {}
     attractionObj = {}
-    Preview(parkObj)
-    Preview(eateryObj)
-    Preview(attractionObj)
+    resetPage()
 }
