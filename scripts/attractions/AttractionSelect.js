@@ -12,7 +12,7 @@ export const attractionSelect = () => {
 }
 
 const render = attractions => {
-    return ` <div class="selections__attractions">
+    return ` <div class="selections__attractions selections__dropdown">
                 <label for="attractionSelect">Choose an attraction</label>
                 <select class="dropdown" id="attractionSelect">
                     <option value="0">Select an attraction...</option>

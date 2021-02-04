@@ -14,9 +14,14 @@
 
 .selections {
     display: flex;
-    justify-content: space-evenly;
-    height: 50px;
+    justify-content: flex-start;
+    height: 75px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.selections__dropdown {
+    margin: 0,0,0,5px;
 }
 
 .preview {

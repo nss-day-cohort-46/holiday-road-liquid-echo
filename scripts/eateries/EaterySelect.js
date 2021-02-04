@@ -27,7 +27,7 @@ export const eaterySelect = () => {
 
 const render = eateries => {
     contentTarget.innerHTML += `
-        <div class="selections__eateries">
+        <div class="selections__eateries selections__dropdown">
             <label for="eaterySelect">Choose an eatery</label>
             <select class="dropdown" id="eaterySelect">
                 <option value="0">Select an Eatery</option>

@@ -13,7 +13,7 @@ export const parkSelect = () => {
 const render = parksCollection => {
     const contentTarget = document.querySelector(".selections") // Get a reference to the DOM element where the <select> will be rendered
     contentTarget.innerHTML += `
-        <div class="selections__parks">
+        <div class="selections__parks selections__dropdown">
             <label for="parkSelect">Choose a park</label>
             <select class="dropdown" id="parkSelect">
                 <option value="0">Please select a park...</option>
