@@ -59,13 +59,13 @@ const render = () => {
     ${parkHTML}
     ${eateryHTML}
     ${attractionHTML}
-    <button class="disabled" id="saveItinerary">Save Itinerary</button>
+    <button disabled id="saveItinerary">Save Itinerary</button>
     `
 }
 
 const saveButtonActive = () => {
     if(parkObj && eateryObj && attractionObj){
-        document.querySelector("#saveItinerary").classList.remove("disabled")
+        document.querySelector("#saveItinerary").disabled = false;
     }
 }
 
