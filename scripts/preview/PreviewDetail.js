@@ -6,6 +6,7 @@ const PreviewDetail = item => {
         <dialog open="open">
             <h4>${item.city}, ${item.state}</h4>
             <p>${item.description}</p>
+            <button id="closeDialog">x</button>
         </dialog>
     `
     render(details)
@@ -19,18 +20,15 @@ const render = dialog => {
 // listen for details button to be clicked, needs the object in the payload
 eventHub.addEventListener("detailsClicked", e => {
     const item = e.detail.item
+    console.log(item)
     PreviewDetail(item)
-    showDialogBox()
 })
 
-// removes "hidden" class from the #dialogContainer
-const showDialogBox = () => {
-    targetElement.classList.remove("hidden")
-}
 
-// adds "hidden" class to the #dialogContainer
+// close the dialox box on x button
 eventHub.addEventListener("click", e => {
-    if (e.target.id !== "#dialogContainer") {
-        targetElement.classList.add("hidden")
+    if (e.target.id === "closeDialog") {
+        const dialogBox = document.querySelector("dialog")
+        dialogBox.close()
     }
 })
