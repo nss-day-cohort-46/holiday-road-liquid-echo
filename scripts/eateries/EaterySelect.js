@@ -18,7 +18,7 @@ eventHub.addEventListener("change", changeEvent => {
 })
 
 export const eaterySelect = () => {
-    getEateries()
+    return getEateries()
     .then( () => {
       const eateries = useEateries()
       render(eateries)
