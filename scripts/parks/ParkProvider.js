@@ -19,3 +19,16 @@ export const getParks = () => {                                           //func
 export const useParks = () => {                                                 //created a function to store a copy of the data and access it from another file.
     return parks.slice()
 }
+export const getParkDetail = (parkId) =>{
+    let park = parks.find(park => parkId === park.id)
+    const parkDetail = {
+        id : park.id,
+        type : "park",
+        name : park.fullName,
+        city : park.addresses[0].city,
+        state : park.addresses[0].stateCode,
+        description : park.description,
+    }
+    return parkDetail
+
+}

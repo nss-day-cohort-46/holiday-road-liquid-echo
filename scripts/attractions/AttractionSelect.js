@@ -4,7 +4,7 @@ const targetElement = document.querySelector('.selections')
 const eventHub = document.querySelector('#container')
 
 export const attractionSelect = () => {
-    getAttractions()
+    return getAttractions()
         .then( () => {
             const attractions = useAttractions()
             targetElement.innerHTML += render(attractions)
