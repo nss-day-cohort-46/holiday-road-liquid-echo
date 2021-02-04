@@ -4,6 +4,7 @@ const eventHub = document.querySelector('#container')
 const PreviewDetail = item => {
     const details = `
         <dialog open="open">
+            <h3>${item.name}</h3>
             <h4>${item.city}, ${item.state}</h4>
             <p>${item.description}</p>
             <button id="closeDialog">x</button>
