@@ -21,7 +21,6 @@ const render = dialog => {
 // listen for details button to be clicked, needs the object in the payload
 eventHub.addEventListener("detailsClicked", e => {
     const item = e.detail.item
-    console.log(item)
     PreviewDetail(item)
 })
 
