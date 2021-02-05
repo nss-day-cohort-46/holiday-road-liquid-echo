@@ -1,3 +1,5 @@
+import { getCoordinates } from "../directions/DirectionProvider.js"
+
 const targetElement = document.querySelector('#dialogContainer')
 const eventHub = document.querySelector('#container')
 

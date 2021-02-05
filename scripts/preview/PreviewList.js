@@ -5,6 +5,7 @@ import { saveItinerary } from "../itinerary/ItineraryProvider.js"
 import { getParkDetail } from "../parks/ParkProvider.js"
 import { Preview } from "./Preview.js"
 import "../weather/WeatherList.js"
+import { getCoordinates, useCoordinates,getDirections, useDirections } from "../directions/DirectionProvider.js"
 
 const parkTargetElement = document.querySelector(".preview__park")
 const eateryTargetElement = document.querySelector(".preview__eatery")
@@ -60,6 +61,52 @@ eventHub.addEventListener("click", e => {
                 attractionState : attractionObj.state,
                 date: new Date()
             }
+        let parkCoords
+        let eateryCoords
+        let attractionCoords
+
+
+    //Nested .thens works but very finicky and not very good
+        getCoordinates(itinerary.parkCity, itinerary.parkState).then(()=>{
+
+            console.log(useCoordinates())
+            parkCoords = useCoordinates()
+            getCoordinates(itinerary.eateryCity, itinerary.eateryState).then(()=>{
+    
+                console.log(useCoordinates())
+                eateryCoords = useCoordinates()
+                getCoordinates(itinerary.attractionCity, itinerary.attractionState).then(()=>{
+        
+                    console.log(useCoordinates())
+                    attractionCoords = useCoordinates()
+                    getDirections(parkCoords,eateryCoords,attractionCoords).then(()=>{
+                        console.log(useDirections())
+                    })
+                })
+            })
+        })
+//trying new promise returns with values instead of having the use function
+        getCoordinates(itinerary.parkCity, itinerary.parkState)
+        .then((parkCoordString)=>{
+            parkCoords = parkCoordString
+        })
+
+        getCoordinates(itinerary.eateryCity, itinerary.eateryState)
+        .then((eateryCoordString)=>{
+                eateryCoords = eateryCoordString
+        })
+
+        getCoordinates(itinerary.attractionCity, itinerary.attractionState)
+        .then((attractionCoordString)=>{
+                attractionCoords = attractionCoordString
+        })
+
+//Promise All goes here something or somewhere
+        getDirections(parkCoords,eateryCoords,attractionCoords)
+        .then(()=>{
+                console.log(useDirections())
+            })
+        
         saveItinerary(itinerary).then(clearPreview).then(ItineraryList)
     }
 })

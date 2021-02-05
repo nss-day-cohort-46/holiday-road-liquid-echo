@@ -44,12 +44,16 @@ const getLocation = (city,state) => {
             locationData = parsedResponse.hits[0].point
         })
 }
+let coordsString
+// export const useCoordinates = () => {
+//     return coordsString
+// }
 
-
-export const Coordinates = (city, state) => {
-    getLocation(city, state)
+export const getCoordinates = (city, state) => {
+    return getLocation(city, state)
     .then( () => {
-        const coordsString = `${locationData.lat},${locationData.lng}`
+        coordsString = `${locationData.lat},${locationData.lng}`
+        return coordsString
         console.log(coordsString)
     })
 }
