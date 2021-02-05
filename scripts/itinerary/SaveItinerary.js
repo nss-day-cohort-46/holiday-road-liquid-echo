@@ -12,7 +12,6 @@ const itinerarySavedMessage = () => {
     savedMessage = `
         <dialog open="open">
             <h3>Itinerary Saved</h3>
-            <button id="closeDialog">x</button>
         </dialog>
     `
     render()
@@ -21,4 +20,12 @@ const itinerarySavedMessage = () => {
 // add html to dialog box
 const render = () => {
     targetElement.innerHTML = savedMessage
+    setTimeout(closeWindow, 2000)
+}
+
+
+
+const closeWindow = () => {
+    const dialogBox = document.querySelector("dialog")
+    dialogBox.close()
 }
