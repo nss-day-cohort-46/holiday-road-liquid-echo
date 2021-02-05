@@ -106,6 +106,9 @@ const resetPage = () => {
     })
 }
 const clearPreview = () => {
+    parkHTML = ""
+    eateryHTML = ""
+    attractionHTML = ""
     parkObj = {}
     eateryObj = {}
     attractionObj = {}
