@@ -28,9 +28,8 @@ export const eaterySelect = () => {
 const render = eateries => {
     contentTarget.innerHTML += `
         <div class="selections__eateries">
-            <label for="eaterySelect">Choose an eatery</label>
             <select class="dropdown" id="eaterySelect">
-                <option value="0">Select an Eatery</option>
+                <option value="0">Pick an eatery</option>
                 ${eateries.map(eatery => `<option value="${eatery.id}">${eatery.businessName}</option>`)}
             </select>
         </div>

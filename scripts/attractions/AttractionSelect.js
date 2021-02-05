@@ -13,9 +13,8 @@ export const attractionSelect = () => {
 
 const render = attractions => {
     return ` <div class="selections__attractions">
-                <label for="attractionSelect">Choose an attraction</label>
                 <select class="dropdown" id="attractionSelect">
-                    <option value="0">Select an attraction...</option>
+                    <option value="0">Pick an attraction</option>
                     ${attractions.map(attraction => {
                         return `<option value="${attraction.id}">${attraction.name}</option>`
                     }).join("")}
