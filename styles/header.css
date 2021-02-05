@@ -3,13 +3,33 @@
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: lightblue;
+    justify-content: stretch;
+}
+
+.header__right {
+    flex-grow: 1;
+    font-family: 'Righteous', cursive;
 }
 
 .nav {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-evenly;
-    flex-grow: 1;
+    background-color: black;
+    border-radius: 5px;
+    margin: 1% 20%;
+    color: whitesmoke;
+    height: 40px;
+    
+
+}
+
+a:visited {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: yellow;
 }
 
 #logo {
@@ -18,3 +38,14 @@
     margin: 5px;
 }
 
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navDivider {
+    color: grey;
+}
