@@ -17,11 +17,11 @@ export const Itinerary = itineraryObj => {
 eventHub.addEventListener("click", e => {
     if (e.target.classList.contains("getDirections")) {
         const itineraryID = e.target.id.split("--")[1]
-        console.log(itineraryID)
-        // const customEvent = new CustomEvent("directionsRequested", {
-        //     detail: {
-        //         id: 
-        //     }
-        // })
+        const customEvent = new CustomEvent("directionsRequested", {
+            detail: {
+                id: itineraryID
+            }
+        })
+        eventHub.dispatchEvent(customEvent)
     }
 })

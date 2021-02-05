@@ -13,8 +13,5 @@ parkSelect()
     .then(attractionSelect)
     .then(ItineraryList)
 
-// TEST CODE - should console log a single string of coordinates
+// TEST CODE 
 
-Coordinates("nashville", "tn")
-Coordinates("denver", "co")
-Coordinates("tampa", "fl")

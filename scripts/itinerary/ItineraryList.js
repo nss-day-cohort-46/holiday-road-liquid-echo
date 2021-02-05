@@ -1,5 +1,5 @@
 import { Itinerary } from "./Itinerary.js"
-import { getItineraries, useItineraries } from "./ItineraryProvider.js"
+import { getItineraries, getItineraryByID, useItineraries } from "./ItineraryProvider.js"
 
 const eventHub = document.querySelector('#container')
 
@@ -18,5 +18,6 @@ export const ItineraryList = () => {
 }
 
 eventHub.addEventListener("directionsRequested", e => {
-    const itineraryID = e.detail.id
+    const itineraryID = parseInt(e.detail.id)
+    getItineraryByID(itineraryID)
 })
