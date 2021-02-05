@@ -11,7 +11,7 @@ let savedMessage = ""
 const itinerarySavedMessage = () => {
     savedMessage = `
         <dialog open="open">
-            <h3>Itinerary Saved</h3>
+            <p class="savedMessage">Itinerary Saved<p>
         </dialog>
     `
     render()
