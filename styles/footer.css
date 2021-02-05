@@ -2,6 +2,7 @@
     border-radius: 5px;
     flex-grow: 1;
     margin: 2px;
-    background-color: lightgray;
+    background-color: black;
     text-align: center;
+    color: whitesmoke;
 }
