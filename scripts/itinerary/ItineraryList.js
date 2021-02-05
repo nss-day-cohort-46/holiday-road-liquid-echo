@@ -1,3 +1,4 @@
+import { getLocation, useLocation } from "../directions/DirectionProvider.js"
 import { Itinerary } from "./Itinerary.js"
 import { getItineraries, getItineraryByID, useItineraries } from "./ItineraryProvider.js"
 
@@ -19,5 +20,19 @@ export const ItineraryList = () => {
 
 eventHub.addEventListener("directionsRequested", e => {
     const itineraryID = parseInt(e.detail.id)
-    getItineraryByID(itineraryID)
+    const itinerary = getItineraryByID(itineraryID)
+    const parkCity = itinerary.parkCity
+    const parkState = itinerary.parkState
+    const attractionCity = itinerary.attractionCity
+    const attractionState = itinerary.attractionState
+    const eateryCity = itinerary.eateryCity
+    const eateryState = itinerary.eateryState
+    
+    let parkCoords 
+    let attractionCoords 
+    let eateryCoords 
+
+    console.log(getLocation(parkCity, parkState).then(useLocation))
+    
+    
 })

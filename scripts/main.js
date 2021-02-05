@@ -5,7 +5,7 @@ import './preview/PreviewList.js'
 import './preview/PreviewDetail.js'
 import { ItineraryList } from "./itinerary/ItineraryList.js";
 import './itinerary/SaveItinerary.js'
-import { Coordinates } from "./directions/DirectionProvider.js";
+
 
 
 parkSelect()
@@ -14,10 +14,3 @@ parkSelect()
     .then(ItineraryList)
 
 // TEST CODE 
-
-<<<<<<< HEAD
-=======
-Coordinates("nashville", "tn")
-Coordinates("denver", "co")
-Coordinates("tampa", "fl")
->>>>>>> main
