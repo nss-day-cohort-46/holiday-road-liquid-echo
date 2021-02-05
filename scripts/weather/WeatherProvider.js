@@ -16,7 +16,6 @@ export const getWeather = park => {
         weatherCollection = parsedRes.daily
         const eightDayForecast = buildWeatherArray()
         fiveDayForecast = eightDayForecast.slice(0,5)
-        console.log(useWeather())
     })
 }
 
