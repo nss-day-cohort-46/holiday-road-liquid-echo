@@ -30,21 +30,21 @@ export const useDirections = () => {
 //combine multiple words with a "+". Ex: nashville+tn instead of nashville tn
 //the information is an object containing an array of hits. each hit is an object.  object.hits
 
-export const getLocation = (searchString) => {                                         
-    return fetch(`https://graphhopper.com/api/1/geocode?q=${searchString}&locale=us&debug=true&key=${settings.graphhopperKey}`, {
+const getLocation = (city,state) => {                                         
+    return fetch(`https://graphhopper.com/api/1/geocode?q=${city}+${state}&locale=us&debug=true&key=${settings.graphhopperKey}`, {
     method: "GET",
     }) 
         .then(response => response.json())                                      
         .then(parsedResponse => {
-            locationData = parsedResponse
-            //testCode
-            console.log("Location search results",useLocation())                                      
-        }
-        )
+            locationData = parsedResponse.hits[0].point
+        })
 }
 
-//makes a copy of the search results
-export const useLocation = () => {
-    return locationData.hits.slice()
-}
 
+export const Coordinates = (city, state) => {
+    getLocation(city, state)
+    .then( () => {
+        const coordsString = `${locationData.lat},${locationData.lng}`
+        console.log(coordsString)
+    })
+}
