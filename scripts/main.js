@@ -15,3 +15,9 @@ parkSelect()
 
 // TEST CODE 
 
+<<<<<<< HEAD
+=======
+Coordinates("nashville", "tn")
+Coordinates("denver", "co")
+Coordinates("tampa", "fl")
+>>>>>>> main

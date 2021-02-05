@@ -48,10 +48,16 @@ eventHub.addEventListener("click", e => {
         const itinerary = {
                 parkName: parkObj.name,
                 parkID: parkObj.id,
+                parkCity : parkObj.city.split(" ").join("+"),
+                parkState : parkObj.state,
                 eateryName: eateryObj.name,
                 eateryID: eateryObj.id,
+                eateryCity : eateryObj.city.split(" ").join("+"),
+                eateryState : eateryObj.state,
                 attractionName: attractionObj.name,
                 attractionID: attractionObj.id,
+                attractionCity : attractionObj.city.split(" ").join("+"),
+                attractionState : attractionObj.state,
                 date: new Date()
             }
         saveItinerary(itinerary).then(clearPreview).then(ItineraryList)

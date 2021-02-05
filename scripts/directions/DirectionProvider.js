@@ -34,7 +34,8 @@ export const useDirections = () => {
 //combine multiple words with a "+". Ex: nashville+tn instead of nashville tn
 //the information is an object containing an array of hits. each hit is an object.  object.hits
 
-const getLocation = (city,state) => {                                         
+const getLocation = (city,state) => {
+                                      
     return fetch(`https://graphhopper.com/api/1/geocode?q=${city}+${state}&locale=us&debug=true&key=${settings.graphhopperKey}`, {
     method: "GET",
     }) 
