@@ -2,6 +2,7 @@ const eventHub = document.querySelector("#container")
 const targetElement = document.querySelector('#dialogContainer')
 
 eventHub.addEventListener("itinerariesStateChanged", event => {
+    document.querySelector("#saveItinerary").disabled = true
     itinerarySavedMessage()
 })
 
