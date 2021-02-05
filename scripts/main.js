@@ -4,6 +4,7 @@ import { parkSelect } from './parks/ParkSelect.js'
 import './preview/PreviewList.js'
 import './preview/PreviewDetail.js'
 import { ItineraryList } from "./itinerary/ItineraryList.js";
+import './itinerary/SaveItinerary.js'
 
 
 parkSelect()
