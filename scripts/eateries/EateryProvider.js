@@ -18,7 +18,7 @@ export const getEateryDetail = (eateryId) =>{
         city : eatery.city,
         state : eatery.state,
         description : eatery.description,
+        wifi : eatery.ameneties.wifi
     }
     return eateryDetail
-
 }
