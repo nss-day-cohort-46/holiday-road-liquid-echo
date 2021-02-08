@@ -4,7 +4,7 @@ let directionData = {}
 //Gets directions from point1 to point2 to point3
 //Response should return an object with an array at object.paths.instructions which contains written instructions
 //parameters need format (numberCommaNumber) no spaces. Ex: 36.1622296,-86.7743531
-export const getDirections = (parkLatLong, eateryLatLong, attractionLatLong) => {                                           
+export const getDirections = ([parkLatLong, eateryLatLong, attractionLatLong]) => {                                           
     return fetch(`https://graphhopper.com/api/1/route?point=36.1622296,-86.7743531&point=${parkLatLong}&point=${eateryLatLong}&point=${attractionLatLong}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${settings.graphhopperKey}`, {
         method: "GET",
     }) 
@@ -41,5 +41,6 @@ export const getLocation = (city,state) => {
         .then(parsedResponse => {
             const locationData = parsedResponse.hits[0].point
             coordinatesStr = `${locationData.lat},${locationData.lng}`
+            return coordinatesStr
         })
 }
