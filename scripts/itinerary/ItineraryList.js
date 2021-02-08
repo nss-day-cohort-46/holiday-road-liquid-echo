@@ -1,10 +1,13 @@
-import { getDirections, getLocation, useLocation } from "../directions/DirectionProvider.js"
+import { getDirections, getLocation, useDirections } from "../directions/DirectionProvider.js"
 import { Itinerary } from "./Itinerary.js"
 import { getItineraries, getItineraryByID, useItineraries } from "./ItineraryProvider.js"
+import { ListDirections } from './DirectionsDisplay.js'
 
 const eventHub = document.querySelector('#container')
+const dialogBox = document.querySelector('#dialogContainer')
 
 let arrayOfItineraries = []
+let currentItinerary
 const contentTarget = document.querySelector(".itineraries")
 
 export const ItineraryList = () => {
@@ -20,13 +23,13 @@ export const ItineraryList = () => {
 
 eventHub.addEventListener("directionsRequested", e => {
     const itineraryID = parseInt(e.detail.id)
-    const itinerary = getItineraryByID(itineraryID)
-    const parkCity = itinerary.parkCity
-    const parkState = itinerary.parkState
-    const attractionCity = itinerary.attractionCity
-    const attractionState = itinerary.attractionState
-    const eateryCity = itinerary.eateryCity
-    const eateryState = itinerary.eateryState
+    currentItinerary = getItineraryByID(itineraryID)
+    const parkCity = currentItinerary.parkCity
+    const parkState = currentItinerary.parkState
+    const attractionCity = currentItinerary.attractionCity
+    const attractionState = currentItinerary.attractionState
+    const eateryCity = currentItinerary.eateryCity
+    const eateryState = currentItinerary.eateryState
     
 
     let parkPromise = getLocation(parkCity,parkState)
@@ -43,13 +46,8 @@ eventHub.addEventListener("directionsRequested", e => {
     })
 
     Promise.all([parkPromise, eateryPromise, attractionPromise]).then((allCoords)=>{
-        debugger
-        getDirections(allCoords)
+        getDirections(allCoords).then(() => {
+            ListDirections(useDirections(), currentItinerary)
+        }) 
     })
-
-
-  // Dear Lord, Help.
-  alert(`Directions requested for itinerary number ${itineraryID}`)
-    
-    
 })

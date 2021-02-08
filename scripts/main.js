@@ -12,5 +12,3 @@ parkSelect()
     .then(eaterySelect)
     .then(attractionSelect)
     .then(ItineraryList)
-
-// TEST CODE 
