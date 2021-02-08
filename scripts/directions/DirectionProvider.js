@@ -10,11 +10,8 @@ export const getDirections = ([parkLatLong, eateryLatLong, attractionLatLong]) =
     }) 
     .then(response => response.json())                                      
     .then(parsedResponse => {
-        directionData = parsedResponse
-        //testCode
-        console.log("written directions", useDirections())                                   
-    }
-    )
+        directionData = parsedResponse                               
+    })
 }
 
 //makes a copy of the written instructions

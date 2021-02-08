@@ -4,7 +4,7 @@
     background-color: rgb(226, 148, 161);
     border-radius: 5px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .itinerary {
