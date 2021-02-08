@@ -48,6 +48,9 @@ eventHub.addEventListener("directionsRequested", e => {
     Promise.all([parkPromise, eateryPromise, attractionPromise]).then((allCoords)=>{
         getDirections(allCoords).then(() => {
             ListDirections(useDirections(), currentItinerary)
+        })
+        .catch(error => {
+            alert("directions not Available")
         }) 
     })
 })
