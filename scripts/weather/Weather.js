@@ -9,7 +9,6 @@ const iconify = text => {
 }
 
 export const Weather = day => {
-    console.log(day.mainWeather)
     return `
     <div class="weatherCard">
         <p>${day.name}</p>
