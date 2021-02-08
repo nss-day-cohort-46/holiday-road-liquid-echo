@@ -28,11 +28,8 @@ eventHub.addEventListener("directionsRequested", e => {
     const eateryCity = itinerary.eateryCity
     const eateryState = itinerary.eateryState
     
-    let parkCoords 
-    let attractionCoords 
-    let eateryCoords 
-
-    console.log(getLocation(parkCity, parkState).then(useLocation))
+  // Dear Lord, Help.
+  alert(`Directions requested for itinerary number ${itineraryID}`)
     
     
 })
