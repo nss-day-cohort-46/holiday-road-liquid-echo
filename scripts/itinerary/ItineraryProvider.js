@@ -26,3 +26,11 @@ export const saveItinerary = itinerary => {
     .then(getItineraries)
     .then(dispatchStateChangeEvent)
 }
+
+
+// use for get Itinerary by ID
+export const getItineraryByID = itineraryID => {
+    let itinerary = itinerariesCollection.find(itinerary => itineraryID === itinerary.id)
+    return itinerary
+}
+
