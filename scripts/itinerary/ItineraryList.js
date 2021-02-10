@@ -50,6 +50,7 @@ eventHub.addEventListener("directionsRequested", e => {
             ListDirections(useDirections(), currentItinerary)
         })
         .catch(error => {
+            console.error(error)
             alert("directions not Available")
         }) 
     })

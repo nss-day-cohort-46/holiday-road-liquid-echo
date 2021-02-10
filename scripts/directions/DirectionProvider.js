@@ -8,7 +8,13 @@ export const getDirections = ([parkLatLong, eateryLatLong, attractionLatLong]) =
     return fetch(`https://graphhopper.com/api/1/route?point=36.1622296,-86.7743531&point=${parkLatLong}&point=${eateryLatLong}&point=${attractionLatLong}&vehicle=car&locale=us&instructions=true&calc_points=true&key=${settings.graphhopperKey}`, {
         method: "GET",
     }) 
-    .then(response => response.json())                                      
+    .then(response => {
+        if (!response.ok) {
+            throw Error(`API status: ${response.status}`)
+        } else {
+            return response.json()
+        }
+    })                                      
     .then(parsedResponse => {
         directionData = parsedResponse                               
     })
